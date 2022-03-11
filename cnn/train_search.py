@@ -106,6 +106,7 @@ def main():
   architect = Architect(model, args)
 
   for epoch in range(args.epochs):
+    print(epoch)
     scheduler.step()
     lr = scheduler.get_lr()[0]
     logging.info('epoch %d lr %e', epoch, lr)
